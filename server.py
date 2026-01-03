@@ -5,12 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return 'Orión está listo en Railway 🚀'
-
-# Ruta para comandos JSON
-@app.route('/comando', methods=['POST'])
-def comando():
-    return {'respuesta': 'Comando recibido correctamente'}
+    return 'Orión está listo en la nube 🚀'
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 8000))
