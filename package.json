@@ -1,25 +1,23 @@
 {
+  "name": "orion-api",
+  "version": "1.0.0",
+  "description": "Servidor básico para Orión",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Lebier",
+  "license": "ISC",
   "dependencies": {
     "express": "^5.2.1"
   },
-  "name": "orion-api",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lebierl87/orion-api.git"
+    "url": "git+https://github.com/lebier187/orion-api.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/lebierl87/orion-api/issues"
+    "url": "https://github.com/lebier187/orion-api/issues"
   },
-  "homepage": "https://github.com/lebierl87/orion-api#readme"
+  "homepage": "https://github.com/lebier187/orion-api#readme"
 }

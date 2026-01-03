@@ -1,10 +1,26 @@
-const express = require("express");
+const express = require('express');
 const app = express();
+const PORT = process.env.PORT || 3000;
 
-app.get("/", (req, res) => {
-  res.send("Servidor gratis en Koyeb funcionando!");
+app.use(express.json());
+
+// Ruta raíz
+app.get('/', (req, res) => {
+  res.send('🛰️ Orión está activo y escuchando...');
 });
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log("Servidor iniciado");
+// Ruta para comandos JSON
+app.post('/comando', (req, res) => {
+  const comando = req.body;
+  console.log('📥 Comando recibido:', comando);
+  res.json({ estado: 'ok', recibido: comando });
+});
+
+// Ruta de estado
+app.get('/estado', (req, res) => {
+  res.json({ estado: 'activo', hora: new Date().toISOString() });
+});
+
+app.listen(PORT, () => {
+  console.log(`🚀 Servidor Orión corriendo en puerto ${PORT}`);
 });
